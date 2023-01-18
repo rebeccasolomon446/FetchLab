@@ -64,7 +64,7 @@ const getAllCountries = async (event) => {
 getAllCountries();
 
 // Form
-const handleCountryForm = async (event) => {
+const countryForm = async (event) => {
 
     event.preventDefault();
 
@@ -76,25 +76,12 @@ const handleCountryForm = async (event) => {
     const countryItem = document.createElement("p");
     countryItem.textContent = getCountryByName(event.target.country.value);
 
-    // const response = getCountryByName(event.target.toDo.value);
-
-    // create list item
-    // get country name into textContent
-    // append to list in HTML
-    
-    
-    
-
-    // console.log(countryItem.textContent);
-
-    
     countries.appendChild(countryItem);
-
 }
 
 const countries = document.getElementById("countryForm");
 
-countries.addEventListener("submit", handleCountryForm); 
+countries.addEventListener("submit", countryForm); 
 
 
 
